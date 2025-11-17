@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Paulo Costa Neto | Portfolio Full Stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="hvr-underline-from-center">Home</a></li>
+            <li><a href="#about" class="hvr-underline-from-center">Sobre Mim</a></li>
+            <li><a href="#education" class="hvr-underline-from-center">Educação</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="flip-left" data-aos-duration="1000">
+            <h1>Olá, eu sou <span class="gradient-text">Luis Paulo</span></h1>
+            <p class="hero-subtitle">Desenvolvedor Full Stack</p>
+            <p class="hero-subtitle second-line">Transformando ideias em aplicações funcionais e escaláveis.</p>
+            <p class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                Teresina-Piaui<a href="#" style="color: inherit; text-decoration: none;">Brasil</a>
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/LuisPauloCN507" target="_blank" class="social-icon hvr-float">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/luis-paulo-costa-neto-42521a352" target="_blank" class="social-icon hvr-float">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon hvr-float" onclick="copyEmail(event)">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="hero-cta">
+                <a href="#about" class="cta-button scroll-link">Minhas Habilidades</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="card about-card" data-aos="flip-right" data-aos-duration="1000">
+            <h2 class="section-title">Sobre Mim</h2>
+            <p>
+                Sou um **Dev Full Stack** com foco em construir e manter aplicações web completas. Minha expertise abrange tanto o desenvolvimento **front-end**, garantindo interfaces intuitivas e responsivas, quanto o **back-end**, focando em performance e segurança.
+            </p>
+            <p>
+                Meu foco é em **eficiência, código limpo e escalabilidade**, sempre buscando aprender as melhores práticas do mercado e as tecnologias mais atuais. Meu objetivo é contribuir para projetos desafiadores, aplicando minhas habilidades para entregar soluções de software de alto valor.
+            </p>
+        </div>
+        
+        <div class="card technologies-card" data-aos="flip-left" data-aos-duration="1000">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="tech-grid">
+                
+                <div class="tech-item">
+                    <img src="assets/js.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                    <div class="tech-description">Linguagem base para desenvolvimento web interativo e Back-End (Node.js).</div>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/html.png" alt="HTML5">
+                    <span>HTML5</span>
+                    <div class="tech-description">Linguagem de marcação para estruturar o conteúdo da web.</div>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/css.png" alt="CSS3">
+                    <span>CSS3</span>
+                    <div class="tech-description">Folhas de estilo para design e formatação de páginas.</div>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/react.png" alt="React">
+                    <span>React</span>
+                    <div class="tech-description">Biblioteca JavaScript para construção de interfaces de usuário modernas.</div>
+                </div>
+                
+                <div class="tech-item">
+                    <img src="assets/node.png" alt="Node.js">
+                    <span>Node.js</span>
+                    <div class="tech-description">Ambiente de execução JavaScript no lado do servidor (Back-End).</div>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/python.png" alt="Python">
+                    <span>Python</span>
+                    <div class="tech-description">Linguagem versátil para desenvolvimento Back-End e scripts.</div>
+                </div>
+                
+                <div class="tech-item">
+                    <img src="assets/sql.png" alt="SQL">
+                    <span>SQL</span>
+                    <div class="tech-description">Linguagem para gerenciar bancos de dados relacionais (ex: MySQL/PostgreSQL).</div>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/mongo.png" alt="MongoDB">
+                    <span>MongoDB</span>
+                    <div class="tech-description">Banco de dados NoSQL focado em escalabilidade e flexibilidade.</div>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/git.png" alt="Git">
+                    <span>Git</span>
+                    <div class="tech-description">Sistema de controle de versão (VCS) essencial para colaboração (GitHub).</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="education" class="education">
+        <div class="card experience-card">
+            <h2 class="section-title" data-aos="flip-up" data-aos-duration="800">Educação & Aprendizado</h2>
+            
+            <div class="timeline-container">
+                
+                <div class="timeline-item right" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="institution-logo estacio-logo"></div>
+                        
+                        <h3>Universidade Estácio</h3>
+                        <p class="timeline-institution"> Graduação (EAD)</p>
+                        <p class="timeline-date">Em andamento</p>
+                        <div class="timeline-description-focus">
+                            <p>
+                                **ADS:** Análise e Desenvolvimento de Sistemas.
+                            </p>
+                            <p class="focus-detail">
+                                Foco em metodologias ágeis, modelagem de dados e arquitetura de software.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                         <div class="institution-logo udemy-logo"></div>
+
+                        <h3>Udemy</h3>
+                        <p class="timeline-institution">Cursos de Aprimoramento</p>
+                        <p class="timeline-date">Em andamento</p>
+                        <div class="timeline-description-focus">
+                            <p>
+                                **Curso Principal:** JavaScript e TypeScript do básico ao avançado JS/TS.
+                            </p>
+                            <p class="focus-detail">
+                                **Especialização:** Full Stack Web com Node, JavaScript e TypeScript 2025.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects" style="display: none;">
+        <div class="card main-card">
+            <h2 class="section-title" data-aos="flip-up" data-aos-duration="800">Meus Projetos</h2>
+        </div>
+    </section>
+    <section id="experience" class="experience" style="display: none;">
+        <div class="card experience-card">
+            <h2 class="section-title" data-aos="flip-up" data-aos-duration="800">Experiência</h2>
+        </div>
+    </section>
+
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>E-mail copiado para a área de transferência!</span>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,             
+            offset: 200         
+        });
+    </script>
+    <script src="main.js"></script>
+    
+    <footer>
+        <p>© 2025 Luis Paulo Costa Neto. Feito com Dedicação </p>
+    </footer>
+</body>
+</html>
