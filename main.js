@@ -1,19 +1,17 @@
 // Função para copiar o seu e-mail
 function copyEmail(event) {
     event.preventDefault();
-    // SEU E-MAIL
     const email = 'lu1spaul0d3v@gmail.com'; 
     
-    // Copia o e-mail para a área de transferência
     navigator.clipboard.writeText(email).then(function() {
         showToast();
     }).catch(function(err) {
-        console.error('Não foi possível copiar o e-mail: ', err);
-        alert('E-mail: ' + email);
+        console.error('Erro ao copiar: ', err);
+        alert('E-mail: ' + email); // Fallback caso falhe
     });
 }
 
-// Exibe a mensagem de confirmação (Toast)
+// Exibe a notificação (Toast)
 function showToast() {
     const toast = document.getElementById('toast');
     toast.classList.add('show');
@@ -23,33 +21,45 @@ function showToast() {
     }, 3000);
 }
 
-// Ativa a navegação suave (Scroll-link) para links internos
+// Scroll Suave
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.scroll-link, .nav-links a').forEach(link => {
         link.addEventListener('click', e => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
+            // Se for link externo (Github/Linkedin), não faz scroll
+            if (link.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                // Fecha o menu mobile se estiver aberto
+                const navLinks = document.querySelector('.nav-links');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
 });
 
-// Lógica de menu-toggle (para mobile)
+// Menu Mobile Toggle
 document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('.nav-links').classList.toggle('active');
 });
 
-// Fechar menu ao clicar fora (para mobile)
+// Fechar menu ao clicar fora
 document.addEventListener('click', function(e) {
     const nav = document.querySelector('.navbar');
     const navLinks = document.querySelector('.nav-links');
-    if (!nav.contains(e.target) && navLinks.classList.contains('active')) {
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    // Verifica se o clique não foi na navbar nem no botão de menu
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target) && navLinks.classList.contains('active')) {
         navLinks.classList.remove('active');
     }
 });
