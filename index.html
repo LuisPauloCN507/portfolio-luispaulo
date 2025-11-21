@@ -25,13 +25,16 @@
     
     <section id="home" class="hero">
         <div class="hero-content" data-aos="flip-left" data-aos-duration="1000">
-            <h1>Olá, eu sou <span class="gradient-text">Luis Paulo</span></h1>
+            <h1>Olá, eu sou <span class="gradient-text hacker-effect" data-value="Luis Paulo">Luis Paulo</span></h1>
+            
             <p class="hero-subtitle">Desenvolvedor Full Stack</p>
-            <p class="hero-subtitle second-line">Onde a lógica robusta do Back-end encontra a experiência fluida do Front-end.</p>
+            <p class="hero-subtitle second-line">Do Front-end ao Back-end: criando experiências digitais completas e de alta performance.</p>
+            
             <p class="location">
                 <i class="fas fa-map-marker-alt"></i>
                 Teresina - Piauí - Brasil
             </p>
+            
             <div class="social-links">
                 <a href="https://github.com/LuisPauloCN507" target="_blank" class="social-icon">
                     <i class="fab fa-github"></i>
@@ -43,15 +46,22 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
+
             <div class="hero-cta">
-                <a href="#about" class="cta-button scroll-link">Minhas Habilidades</a>
+                <a href="#about" class="cta-button scroll-link">
+                    Minhas Habilidades
+                </a>
+                <a href="assets/curriculo.pdf" download="Luis_Paulo_CV_FullStack.pdf" class="cta-button resume-btn">
+                    <i class="fas fa-file-download"></i> Download CV
+                </a>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="card about-card" data-aos="flip-right" data-aos-duration="1000">
-            <h2 class="section-title">Sobre Mim</h2>
+            <h2 class="section-title hacker-effect" data-value="Sobre Mim">Sobre Mim</h2>
+            
             <p>
                 Sou um **Dev Full Stack** com foco em construir e manter aplicações web completas. Minha expertise abrange tanto o desenvolvimento **front-end**, garantindo interfaces intuitivas e responsivas, quanto o **back-end**, focando em performance, arquitetura limpa e segurança.
             </p>
@@ -61,9 +71,9 @@
         </div>
         
         <div class="card technologies-card" data-aos="flip-left" data-aos-duration="1000">
-            <h2 class="section-title">Tecnologias & Ferramentas</h2>
+            <h2 class="section-title hacker-effect" data-value="Tecnologias e Ferramentas">Tecnologias e Ferramentas</h2>
+            
             <div class="tech-grid">
-                
                 <div class="tech-item">
                     <img src="assets/js.png" alt="JavaScript">
                     <span>JavaScript</span>
@@ -153,32 +163,25 @@
                     <span>Python</span>
                     <div class="tech-description">Scripts e Automação.</div>
                 </div>
-
             </div>
         </div>
     </section>
     
     <section id="education" class="education">
         <div class="card experience-card">
-            <h2 class="section-title" data-aos="flip-up" data-aos-duration="800">Educação & Aprendizado</h2>
+            <h2 class="section-title hacker-effect" data-value="Educação & Aprendizado">Educação & Aprendizado</h2>
             
             <div class="timeline-container">
-                
                 <div class="timeline-item right" data-aos="fade-left" data-aos-duration="1000">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="institution-logo estacio-logo"></div>
-                        
                         <h3>Universidade Estácio</h3>
                         <p class="timeline-institution">Graduação (EAD)</p>
                         <p class="timeline-date">Em andamento</p>
                         <div class="timeline-description-focus">
-                            <p>
-                                **ADS:** Análise e Desenvolvimento de Sistemas.
-                            </p>
-                            <p class="focus-detail">
-                                Foco em engenharia de software, modelagem de dados e fundamentos da computação.
-                            </p>
+                            <p>**ADS:** Análise e Desenvolvimento de Sistemas.</p>
+                            <p class="focus-detail">Foco em engenharia de software, modelagem de dados e fundamentos da computação.</p>
                         </div>
                     </div>
                 </div>
@@ -187,20 +190,13 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                          <div class="institution-logo udemy-logo"></div>
-
                         <h3>Udemy - Formação Full Stack</h3>
                         <p class="timeline-institution">Cursos Intensivos</p>
                         <p class="timeline-date">Em andamento</p>
                         <div class="timeline-description-focus">
-                            <p>
-                                **Curso 1:** JavaScript e TypeScript do básico ao avançado (Luiz Otávio).
-                            </p>
-                            <p>
-                                **Curso 2:** Full Stack Web com Node, React e TypeScript 2025 (Jamilton Damasceno).
-                            </p>
-                            <p class="focus-detail">
-                                Foco prático em: Next.js, Tailwind, Prisma, SOLID e Design Patterns.
-                            </p>
+                            <p>**Curso 1:** JavaScript e TypeScript do básico ao avançado.</p>
+                            <p>**Curso 2:** Full Stack Web com Node, React e TypeScript 2025.</p>
+                            <p class="focus-detail">Foco prático em: Next.js, Tailwind, Prisma, SOLID e Design Patterns.</p>
                         </div>
                     </div>
                 </div>
@@ -209,14 +205,10 @@
     </section>
 
     <section id="projects" class="projects" style="display: none;">
-        <div class="card main-card">
-            <h2 class="section-title">Meus Projetos</h2>
-        </div>
+        <div class="card main-card"><h2 class="section-title">Meus Projetos</h2></div>
     </section>
     <section id="experience" class="experience" style="display: none;">
-        <div class="card experience-card">
-            <h2 class="section-title">Experiência</h2>
-        </div>
+        <div class="card experience-card"><h2 class="section-title">Experiência</h2></div>
     </section>
 
     <div id="toast" class="toast">
@@ -226,15 +218,12 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,             
-            offset: 200         
-        });
+        AOS.init({ once: true, offset: 200 });
     </script>
     <script src="main.js"></script>
     
     <footer>
-        <p>© 2025 Luis Paulo Costa Neto. Feito com TypeScript e React (Futuramente)</p>
+        <p>© 2025 Luis Paulo Costa Neto. Desenvolvedor Full Stack.</p>
     </footer>
 </body>
 </html>

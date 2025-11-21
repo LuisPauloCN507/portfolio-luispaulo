@@ -1,13 +1,14 @@
+/* --- RESET GERAL --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Esconder Scrollbar mas manter funcionalidade */
 *::-webkit-scrollbar {
     display: none;
 }
-
 * {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -63,6 +64,7 @@ body {
     color: #64ffda;
 }
 
+/* Efeito de sublinhado no menu */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -133,6 +135,43 @@ body {
     color: #64ffda;
 }
 
+/* --- BOTÕES HERO --- */
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+/* Botão de Download Destaque */
+.resume-btn {
+    background-color: rgba(100, 255, 218, 0.05);
+}
+
+.resume-btn:hover {
+    background-color: #64ffda;
+    color: #0a192f;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
 /* --- CARDS & SECTIONS --- */
 .card, .technologies-card, .about-card {
     background: rgba(17, 34, 64, 0.7);
@@ -170,14 +209,13 @@ body {
     margin: 10px auto 0;
 }
 
-/* --- TECH GRID (Atualizado para Flexibilidade) --- */
+/* --- TECH GRID (Responsivo) --- */
 .technologies-card {
     padding: 2.5rem;
 }
 
 .tech-grid {
     display: grid;
-    /* Cria colunas automáticas. Se o espaço for pequeno, reduz as colunas. Mínimo de 100px por item. */
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1.5rem;
     justify-content: center;
@@ -213,7 +251,6 @@ body {
     font-weight: 500;
 }
 
-/* Hover Effects */
 .tech-item:hover {
     transform: translateY(-5px);
     border-color: #64ffda;
@@ -224,7 +261,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Tooltip Description */
 .tech-description {
     position: absolute;
     bottom: 110%;
@@ -262,7 +298,7 @@ body {
     bottom: 120%;
 }
 
-/* --- TIMELINE (EDUCAÇÃO) --- */
+/* --- TIMELINE --- */
 .education {
     padding: 2rem 0;
 }
@@ -358,11 +394,10 @@ body {
     border: 2px solid #64ffda;
 }
 
-/* URLs dos logos (Ajuste se necessário) */
 .estacio-logo { background-image: url('assets/estacio-logo.png'); }
 .udemy-logo { background-image: url('assets/udemy-logo.png'); }
 
-/* --- SOCIAL & BUTTONS --- */
+/* --- SOCIAL & FOOTER --- */
 .social-links {
     margin-top: 1.5rem;
     display: flex;
@@ -381,29 +416,25 @@ body {
     transform: translateY(-3px);
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    border: 1px solid #64ffda;
-    color: #64ffda;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background: rgba(100, 255, 218, 0.1);
-}
-
+/* --- CORREÇÃO DO ERRO DE VALIDATION AQUI --- */
 .gradient-text {
     background: linear-gradient(90deg, #64ffda, #00b4d8);
     -webkit-background-clip: text;
+    background-clip: text; /* <-- Linha adicionada para corrigir o aviso */
     -webkit-text-fill-color: transparent;
     font-weight: 800;
 }
 
-/* --- TOAST NOTIFICATION --- */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #8892b0;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+    margin-top: 3rem;
+}
+
+/* --- TOAST --- */
 .toast {
     position: fixed;
     top: 20px;
@@ -456,7 +487,6 @@ body {
     }
 
     .hero-content h1 { font-size: 2.5rem; }
-    
     .timeline-container::after { left: 20px; }
     .timeline-item { width: 100%; padding-left: 50px; padding-right: 10px; }
     .timeline-item.right { left: 0; }
