@@ -173,7 +173,7 @@ body {
 }
 
 /* --- CARDS & SECTIONS --- */
-.card, .technologies-card, .about-card {
+.card, .technologies-card, .about-card, .main-card {
     background: rgba(17, 34, 64, 0.7);
     border-radius: 8px;
     padding: 2rem;
@@ -209,7 +209,7 @@ body {
     margin: 10px auto 0;
 }
 
-/* --- TECH GRID (Responsivo) --- */
+/* --- TECH GRID --- */
 .technologies-card {
     padding: 2.5rem;
 }
@@ -397,6 +397,99 @@ body {
 .estacio-logo { background-image: url('assets/estacio-logo.png'); }
 .udemy-logo { background-image: url('assets/udemy-logo.png'); }
 
+/* --- SEÇÃO DE PROJETOS (NOVO) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #112240;
+    padding: 1.75rem;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(100, 255, 218, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    border-color: rgba(100, 255, 218, 0.2);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.folder-icon i {
+    font-size: 40px;
+    color: #64ffda;
+}
+
+.project-links a {
+    color: #ccd6f6;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    transition: color 0.2s;
+}
+
+.project-links a:hover {
+    color: #64ffda;
+}
+
+.project-title {
+    color: #ccd6f6;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s;
+}
+
+.project-card:hover .project-title {
+    color: #64ffda;
+}
+
+.project-description {
+    color: #8892b0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.project-tech-list li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: #8892b0;
+}
+
+.project-tech-list img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
 /* --- SOCIAL & FOOTER --- */
 .social-links {
     margin-top: 1.5rem;
@@ -416,11 +509,11 @@ body {
     transform: translateY(-3px);
 }
 
-/* --- CORREÇÃO DO ERRO DE VALIDATION AQUI --- */
+/* --- CORREÇÃO GRADIENTE --- */
 .gradient-text {
     background: linear-gradient(90deg, #64ffda, #00b4d8);
     -webkit-background-clip: text;
-    background-clip: text; /* <-- Linha adicionada para corrigir o aviso */
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
 }
