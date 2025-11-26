@@ -397,7 +397,7 @@ body {
 .estacio-logo { background-image: url('assets/estacio-logo.png'); }
 .udemy-logo { background-image: url('assets/udemy-logo.png'); }
 
-/* --- SEÇÃO DE PROJETOS (NOVO) --- */
+/* --- SEÇÃO DE PROJETOS (NOVO ESTILO) --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -462,7 +462,7 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    flex-grow: 1;
+    flex-grow: 1; /* Empurra as tecnologias para baixo */
 }
 
 .project-tech-list {
@@ -509,7 +509,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* --- CORREÇÃO GRADIENTE --- */
 .gradient-text {
     background: linear-gradient(90deg, #64ffda, #00b4d8);
     -webkit-background-clip: text;
