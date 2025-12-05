@@ -397,7 +397,7 @@ body {
 .estacio-logo { background-image: url('assets/estacio-logo.png'); }
 .udemy-logo { background-image: url('assets/udemy-logo.png'); }
 
-/* --- SEÇÃO DE PROJETOS (ESTILO ATUALIZADO) --- */
+/* --- SEÇÃO DE PROJETOS --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -462,7 +462,7 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    flex-grow: 1; /* Garante que os cards tenham a mesma altura visual */
+    flex-grow: 1;
 }
 
 .project-tech-list {
